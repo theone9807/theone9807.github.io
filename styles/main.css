@@ -419,8 +419,12 @@
   border-radius: 3px;
   background: #FFF;
   cursor: default;
-  -webkit-box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
-          box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+  -webkit-box-shadow: inset 0 0 1px #FFF,
+ inset 0 1px 7px #EBEBEB,
+ 0 3px 6px -3px #BBB;
+          box-shadow: inset 0 0 1px #FFF,
+ inset 0 1px 7px #EBEBEB,
+ 0 3px 6px -3px #BBB;
   -webkit-transition: 300ms ease 0s;
   -moz-transition: 300ms ease 0s;
   -ms-transition: 300ms ease 0s;
@@ -5608,15 +5612,15 @@ Created using IcoMoon - icomoon.io
     transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   }
   .sidebar-collapse .navbar-collapse:before {
-    background: #378C3F;
+    background: #2c3e50;
     /* For browsers that do not support gradients */
     /* For Safari 5.1 to 6.0 */
     /* For Opera 11.1 to 12.0 */
     /* For Firefox 3.6 to 15 */
-    background: -webkit-gradient(linear, left top, left bottom, from(#378C3F), color-stop(80%, #000));
-    background: linear-gradient(#378C3F 0%, #000 80%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#2c3e50), color-stop(80%, #1a252f));
+    background: linear-gradient(#2c3e50 0%, #1a252f 80%);
     /* Standard syntax (must be last) */
-    opacity: 0.76;
+    opacity: 0.95;
     filter: alpha(opacity=76);
     display: block;
     content: "";
@@ -7268,4 +7272,602 @@ a.credit {
 /* Common Style */
 .section {
   padding-bottom: 0;
+}
+
+
+/* =============================================
+   CUSTOM PORTFOLIO ADDITIONS
+   ============================================= */
+
+/* --- Skill Tags (replaces percentage bars) --- */
+.skill-category {
+  margin-bottom: 28px;
+}
+
+.skill-category-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #999;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: rgba(44, 168, 65, 0.08);
+  color: #2CA841;
+  border: 1px solid rgba(44, 168, 65, 0.2);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  cursor: default;
+}
+
+.skill-tag:hover {
+  background-color: #2CA841;
+  color: #fff;
+  border-color: #2CA841;
+}
+
+/* --- Collapsible Project Cards --- */
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.project-toggle {
+  background: none;
+  border: 1px solid #e5e5e5;
+  color: #666;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  outline: none;
+}
+
+.project-toggle:hover,
+.project-toggle:focus {
+  border-color: #2CA841;
+  color: #2CA841;
+  outline: none;
+}
+
+.project-toggle .fa {
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+  font-size: 0.75rem;
+}
+
+.project-toggle[aria-expanded="true"] .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+.project-detail-content {
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+  margin-top: 15px;
+}
+
+.project-detail-content ul {
+  padding-left: 18px;
+  margin-bottom: 15px;
+}
+
+.project-detail-content ul li {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.project-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+  margin-bottom: 12px;
+}
+
+.project-tech-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  background: #f5f5f5;
+  color: #777;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.project-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.project-links-row a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 5px 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 20px;
+  color: #555;
+  transition: all 0.2s ease;
+}
+
+.project-links-row a:hover {
+  border-color: #2CA841;
+  color: #2CA841;
+  text-decoration: none;
+}
+
+/* --- Live Badge --- */
+.badge-live {
+  display: inline-block;
+  padding: 2px 10px;
+  background-color: #2CA841;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+/* --- Achievement Cards --- */
+.achievement-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.achievement-card:last-child {
+  border-bottom: none;
+}
+
+.achievement-icon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(44, 168, 65, 0.08);
+  color: #2CA841;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.achievement-text h5 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+  color: #333;
+}
+
+.achievement-text p {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 0;
+}
+
+/* --- Contact Section Alignment Fix --- */
+#contact .cc-contact .card .row {
+  align-items: flex-start;
+}
+
+#contact .cc-contact .card .col-md-6 .card-body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* --- Responsive Fixes --- */
+@media (max-width: 768px) {
+  .project-card-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .project-toggle {
+    align-self: flex-start;
+  }
+  
+  .project-links-row {
+    flex-direction: column;
+  }
+  
+  .skill-tags {
+    gap: 6px;
+  }
+  
+  .skill-tag {
+    padding: 4px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+/* =============================================
+   PROFESSIONAL COLOR OVERRIDES
+   Minimal, clean charcoal palette
+   ============================================= */
+
+/* --- Header overlay: muted charcoal instead of bright green --- */
+.page-header[filter-color="green"]::after,
+.page-header[filter-color="green"]:after {
+  background: rgba(30, 39, 46, 0.82) !important;
+}
+
+/* --- Primary background: dark charcoal --- */
+.bg-primary {
+  background-color: #2c3e50 !important;
+}
+
+/* --- Primary buttons: charcoal --- */
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  background-color: #2c3e50 !important;
+  border-color: #2c3e50 !important;
+  color: #fff !important;
+}
+
+.btn-primary:hover {
+  background-color: #34495e !important;
+  border-color: #34495e !important;
+}
+
+/* --- Nav pills (college projects tabs): charcoal --- */
+.nav-pills-primary .nav-link.active,
+.nav-pills-primary .nav-link.active:focus,
+.nav-pills-primary .nav-link.active:hover {
+  background-color: #2c3e50 !important;
+  color: #fff !important;
+}
+
+/* --- Skill tags: neutral/subtle --- */
+.skill-tag {
+  background-color: #f0f2f5 !important;
+  color: #2c3e50 !important;
+  border: 1px solid #dce1e6 !important;
+}
+
+.skill-tag:hover {
+  background-color: #2c3e50 !important;
+  color: #fff !important;
+  border-color: #2c3e50 !important;
+}
+
+/* --- Achievement icons: muted --- */
+.achievement-icon {
+  background: #f0f2f5 !important;
+  color: #2c3e50 !important;
+}
+
+/* --- Live badge: charcoal --- */
+.badge-live {
+  background-color: #2c3e50 !important;
+}
+
+/* --- Project toggle button: charcoal tones --- */
+.project-toggle:hover,
+.project-toggle:focus {
+  border-color: #2c3e50 !important;
+  color: #2c3e50 !important;
+}
+
+/* --- Project links: charcoal --- */
+.project-links-row a:hover {
+  border-color: #2c3e50 !important;
+  color: #2c3e50 !important;
+}
+
+/* --- Tech tags in projects: subtle --- */
+.project-tech-tag {
+  background: #f0f2f5 !important;
+  color: #555 !important;
+}
+
+/* =============================================
+   PROJECT CARD SPACING FIX
+   Reduce gaps for tighter, cleaner layout
+   ============================================= */
+#projects .card {
+  margin-bottom: 12px !important;
+}
+
+#projects .card .card-body {
+  padding: 18px 22px !important;
+}
+
+#projects .project-detail-content {
+  margin-top: 12px;
+  padding-top: 12px;
+}
+
+#projects .project-detail-content ul {
+  margin-bottom: 10px;
+}
+
+#projects .h4.title {
+  margin-bottom: 20px !important;
+}
+
+/* =============================================
+   TIMELINE — Dot + Vertical Line Layout
+   Clean, minimal, professional
+   ============================================= */
+.timeline {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto;
+  padding-left: 32px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: #dce1e6;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -32px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #bcc3cc;
+  z-index: 1;
+}
+
+.timeline-item.current .timeline-dot {
+  border-color: #2c3e50;
+  background: #2c3e50;
+  box-shadow: 0 0 0 4px rgba(44, 62, 80, 0.12);
+}
+
+.timeline-content {
+  padding-bottom: 4px;
+}
+
+.timeline-date {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #999;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.timeline-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 14px;
+  margin-bottom: 10px;
+}
+
+.timeline-company {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.timeline-role {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #888;
+}
+
+.timeline-content p {
+  font-size: 0.92rem;
+  color: #555;
+  line-height: 1.65;
+  margin-bottom: 8px;
+}
+
+.timeline-tech {
+  font-size: 0.85rem !important;
+  color: #888 !important;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .timeline {
+    padding-left: 24px;
+  }
+  .timeline::before {
+    left: 5px;
+  }
+  .timeline-dot {
+    left: -24px;
+    width: 12px;
+    height: 12px;
+  }
+  .timeline-heading {
+    flex-direction: column;
+    gap: 1px;
+  }
+}
+
+/* =============================================
+   SKILLS CONTAINER — No card, aligned with timeline
+   ============================================= */
+.skills-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.skill-category {
+  margin-bottom: 24px !important;
+}
+
+.skill-category-title {
+  border-bottom: none !important;
+  padding-bottom: 6px !important;
+  margin-bottom: 10px !important;
+}
+
+/* =============================================
+   CLEAN CONTAINER — About section, no card
+   ============================================= */
+.clean-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.clean-container p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.clean-container .title {
+  margin-bottom: 16px;
+}
+
+/* =============================================
+   PROJECTS CONTAINER — No card, aligned with timeline
+   ============================================= */
+.projects-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.project-item {
+  padding: 18px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.project-item:last-child {
+  border-bottom: none;
+}
+
+.project-item .project-card-header {
+  padding: 0;
+}
+
+.project-item .project-detail-content {
+  padding: 10px 0 0 0;
+}
+
+/* =============================================
+   ACHIEVEMENTS CONTAINER — No card, aligned with timeline
+   ============================================= */
+.achievements-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.achievements-container .achievement-card {
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 0;
+  padding: 14px 0;
+}
+
+.achievements-container .achievement-card:last-child {
+  border-bottom: none;
+}
+
+/* =============================================
+   FLOATING SOCIAL SIDEBAR — Left side
+   ============================================= */
+.floating-sidebar {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.floating-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #2c3e50;
+  color: #fff !important;
+  font-size: 18px;
+  text-decoration: none !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.floating-btn:hover {
+  transform: scale(1.15);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.floating-linkedin:hover {
+  background: #0077b5;
+}
+
+.floating-github:hover {
+  background: #333;
+}
+
+.floating-cv:hover {
+  background: #27ae60;
+}
+
+/* Hide on small screens to avoid overlap */
+@media (max-width: 768px) {
+  .floating-sidebar {
+    right: 12px;
+    bottom: 16px;
+    gap: 8px;
+  }
+  .floating-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
 }
